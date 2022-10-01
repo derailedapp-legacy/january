@@ -10,6 +10,6 @@ fi
 
 cp /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf.template
 
-envsubst '$RESOLVERS $UPSTREAM_HTTP_ADDRESS $CLIENT_MAX_BODY_SIZE $API_URL $SERVER_NAME' < /etc/nginx/conf.d/default.conf.template > /etc/nginx/conf.d/default.conf
+envsubst '$RESOLVERS $UPSTREAM_HTTP_ADDRESS $CLIENT_MAX_BODY_SIZE $API_URL $SERVER_NAME $GATEWAY_URL' < /etc/nginx/conf.d/default.conf.template > /etc/nginx/conf.d/default.conf
 
 exec "$@"
